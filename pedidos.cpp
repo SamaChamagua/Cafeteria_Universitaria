@@ -3,7 +3,7 @@
  
 using namespace std;
 
-void FCategoria(string pedido[], float precio[], int cantidad, float total){ 
+float FCategoria(string pedido[], float precio[], int cantidad, float total){ 
 
     char categoria;
     int CatSnacks, CatBebidas, CatComida;
@@ -163,6 +163,8 @@ void FCategoria(string pedido[], float precio[], int cantidad, float total){
 
 cout<<"Su total a pagar es: $"<<total<<"\n";
 
+
+return total;
 }
 
 
