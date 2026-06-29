@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void cancelarPedido (string pedido[], double precios[], int &cantidad, float &total){
+void cancelarPedido (string pedido[], float precios[], int &cantidad, float &total){
     system ("cls"); //Limpia la pantalla 
         if (cantidad >0){
             for(int i=0; i<cantidad; i++){
