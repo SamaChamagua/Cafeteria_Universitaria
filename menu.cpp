@@ -7,7 +7,6 @@ void cancelarPedido(string pedido[], float precios[], int &cantidad, float &tota
 
 int main()
 {
-    //  Declaración de variables
     string pedido[100];
     float precios[100];
     int cantidad = 0;
