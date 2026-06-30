@@ -1,7 +1,9 @@
-#ifndef pedidos_H
+#ifndef pedidos_H    
 #define pedidos_H
-#include <string>
 
-void realizarPedido(string pedido[], float precio[], int &cantidad, float &total);
+#include <string>
+using namespace std;
+
+void realizarPedido(string pedido[], float precios[], int &cantidad, float &total);
 
 #endif 
