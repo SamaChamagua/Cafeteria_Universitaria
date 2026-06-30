@@ -1,9 +1,9 @@
 #include <iostream>
 #include "pedidos.h"
- 
+#include <string>
 using namespace std;
 
-float FCategoria(string pedido[], float precio[], int cantidad, float total){ 
+void realizarPedido(string pedido[], float precio[], int &cantidad, float &total){ 
 
     char categoria;
     int CatSnacks, CatBebidas, CatComida;

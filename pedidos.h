@@ -1,6 +1,7 @@
 #ifndef pedidos_H
 #define pedidos_H
+#include <string>
 
-float FCategoria(string pedido[], float precio[], int cantidad, float total);
+void realizarPedido(string pedido[], float precio[], int &cantidad, float &total);
 
 #endif 
