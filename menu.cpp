@@ -2,10 +2,8 @@
 #include <string>
 using namespace std;
 
-//   Funciones
 void realizarPedido(string pedido[], float precios[], int &cantidad, float &total);
 void cancelarPedido(string pedido[], float precios[], int &cantidad, float &total);
-void guardarPedido(string pedido[], float precios[], int cantidad, float total);
 
 int main()
 {
@@ -25,32 +23,26 @@ int main()
         cout << "Seleccione una opcion: ";
         cin >> opc;
 
-        // Validación de opción
-        if (opc < 1 || opc > 3)
-        {
-            cout << "\nOpcion invalida. Intente de nuevo.\n";
-        }
-        else
-        {
-            //  Switch 
-            switch(opc)
-            {
-                case 1:
-                    realizarPedido(pedido, precios, cantidad, total);
-                    break;
+        while (opc < 1 || opc > 3) {
+    cout << "\nOpcion invalida. Intente de nuevo.\n";
+    cout << "Seleccione una opcion: ";
+    cin >> opc; 
 
-                case 2:
-                    cancelarPedido(pedido, precios, cantidad, total);
-                    break;
+    switch(opc) {
+    case 1:
+        realizarPedido(pedido, precios, cantidad, total);
+        break;
 
-                case 3:
-                    guardarPedido(pedido, precios, cantidad, total);
-                    cout << "\nGracias por usar Cafeteria Universitaria :)\n";
-                    break;
-            }
-        }
+    case 2:
+        cancelarPedido(pedido, precios, cantidad, total);
+        break;
 
-    } while(opc != 3);
+    case 3:
+       guardarPedido(pedido, precios, cantidad, total);
+        break;
+}
 
-    return 0;
+} while(opc != 3); 
+
+return 0;
 }
