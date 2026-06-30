@@ -1,9 +1,10 @@
 #include <iostream>
+#include <string>
 #include "pedidos.h"
- 
+
 using namespace std;
 
-float FCategoria(string pedido[], float precio[], int cantidad, float total){ 
+void realizarPedido(string pedido[], float precios[], int &cantidad, float &total){ 
 
     char categoria;
     int CatSnacks, CatBebidas, CatComida;
@@ -24,32 +25,37 @@ float FCategoria(string pedido[], float precio[], int cantidad, float total){
         cin>>CatSnacks;
 
         if (CatSnacks == 1){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Papa Lays";
-            precio[cantidad]=0.65;
+            precios[cantidad]=0.65;
             total= total + 0.65;
             cantidad++;
         }
         else if (CatSnacks == 2){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Galleta Oreo";
-            precio[cantidad]=0.50;
+            precios[cantidad]=0.50;
             total= total + 0.50;
             cantidad++;
         }
         else if (CatSnacks == 3){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Galleta trigo";
-            precio[cantidad]=0.50;
+            precios[cantidad]=0.50;
             total= total + 0.50;
             cantidad++;
         }
         else if (CatSnacks == 4){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Cheetos";
-            precio[cantidad]=0.75;
+            precios[cantidad]=0.75;
             total= total + 0.75;
             cantidad++;
         }
         else if (CatSnacks == 5){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Nachos";
-            precio[cantidad]=0.25;
+            precios[cantidad]=0.25;
             total= total + 0.25;
             cantidad++;
         }
@@ -72,32 +78,37 @@ float FCategoria(string pedido[], float precio[], int cantidad, float total){
         cin>>CatBebidas;
 
         if (CatBebidas == 1){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Agua";
-            precio[cantidad]=0.50;
+            precios[cantidad]=0.50;
             total= total + 0.50;
             cantidad++;
         }
         else if (CatBebidas == 2){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Jugo";
-            precio[cantidad]=0.75;
+            precios[cantidad]=0.75;
             total= total + 0.75;
             cantidad++;
         }
         else if (CatBebidas == 3){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Refresco";
-            precio[cantidad]=0.85;
+            precios[cantidad]=0.85;
             total= total + 0.85;
             cantidad++;
         }
         else if (CatBebidas == 4){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Cafe";
-            precio[cantidad]=1.00;
+            precios[cantidad]=1.00;
             total= total + 1.00;
             cantidad++;
         }
         else if (CatBebidas == 5){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Te";
-            precio[cantidad]=0.75;
+            precios[cantidad]=0.75;
             total= total + 0.75;
             cantidad++;
         }
@@ -120,32 +131,37 @@ float FCategoria(string pedido[], float precio[], int cantidad, float total){
         cin>>CatComida;
 
         if (CatComida == 1){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Croissant de pollo";
-            precio[cantidad]=2.50;
+            precios[cantidad]=2.50;
             total= total + 2.50;
             cantidad++;
         }
         else if (CatComida == 2){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Sandwich";
-            precio[cantidad]=1.50;
+            precios[cantidad]=1.50;
             total= total + 1.50;
             cantidad++;
         }
         else if (CatComida == 3){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Sopa de Frijoles";
-            precio[cantidad]=1.75;
+            precios[cantidad]=1.75;
             total= total + 1.75;
             cantidad++;
         }
         else if (CatComida == 4){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Ensalada";
-            precio[cantidad]=1.25;
+            precios[cantidad]=1.25;
             total= total + 1.25;
             cantidad++;
         }
         else if (CatComida == 5){
+            for (int i = 0; i < cantidad; i++) {}
             pedido[cantidad]="Tacos";
-            precio[cantidad]=2.00;
+            precios[cantidad]=2.00;
             total= total + 2.00;
             cantidad++;
         }
@@ -161,10 +177,9 @@ float FCategoria(string pedido[], float precio[], int cantidad, float total){
         break;
 }
 
-cout<<"Su total a pagar es: $"<<total<<"\n";
+cout << "Total acumulado: $" << total << "\n";
 
-
-return total;
+return;
 }
 
 
