@@ -8,6 +8,8 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
 
     char categoria;
     int CatSnacks, CatBebidas, CatComida;
+    int cant;
+
 
     cout <<"Seleccione categoria:\n"<<"a)Snacks\n"<<"b)Bebidas\n"<<"c)Comida\n";
     cin>>categoria;
@@ -25,39 +27,55 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         cin>>CatSnacks;
 
         if (CatSnacks == 1){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Papa Lays";
-            precios[cantidad]=0.65;
-            total= total + 0.65;
-            cantidad++;
+            cout<<"Cuantas unidades de Papa Lays desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Papa Lays";
+                precios[cantidad]=0.65;
+                total= total + 0.65;
+                cantidad++;
+            }
         }
         else if (CatSnacks == 2){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Galleta Oreo";
-            precios[cantidad]=0.50;
-            total= total + 0.50;
-            cantidad++;
+            cout<<"Cuantas unidades de Galleta Oreo desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Galleta Oreo";
+                precios[cantidad]=0.50;
+                total= total + 0.50;
+                cantidad++;
+            }
         }
         else if (CatSnacks == 3){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Galleta trigo";
-            precios[cantidad]=0.50;
-            total= total + 0.50;
-            cantidad++;
+            cout<<"Cuantas unidades de Galleta trigo desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Galleta trigo";
+                precios[cantidad]=0.50;
+                total= total + 0.50;
+                cantidad++;
+            }
         }
         else if (CatSnacks == 4){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Cheetos";
-            precios[cantidad]=0.75;
-            total= total + 0.75;
-            cantidad++;
+            cout<<"Cuantas unidades de  desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Cheetos";
+                precios[cantidad]=0.75;
+                total= total + 0.75;
+                cantidad++;
+            }
+            
         }
         else if (CatSnacks == 5){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Nachos";
-            precios[cantidad]=0.25;
-            total= total + 0.25;
-            cantidad++;
+            cout<<"Cuantas unidades de Nachos desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Nachos";
+                precios[cantidad]=0.25;
+                total= total + 0.25;
+                cantidad++;
+            }
         }
 
         else{
@@ -78,39 +96,54 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         cin>>CatBebidas;
 
         if (CatBebidas == 1){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Agua";
-            precios[cantidad]=0.50;
-            total= total + 0.50;
-            cantidad++;
+            cout<<"Cuantas botellas de Agua desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Agua";
+                precios[cantidad]=0.50;
+                total= total + 0.50;
+                cantidad++;
+            }
         }
         else if (CatBebidas == 2){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Jugo";
-            precios[cantidad]=0.75;
-            total= total + 0.75;
-            cantidad++;
+            cout<<"Cuantas botellas de Jugo desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Jugo";
+                precios[cantidad]=0.75;
+                total= total + 0.75;
+                cantidad++;
+            }
         }
         else if (CatBebidas == 3){
-            for (int i = 0; i < cantidad; i++) {}
+            cout<<"Cuantas botellas de Refresco desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
             pedido[cantidad]="Refresco";
             precios[cantidad]=0.85;
             total= total + 0.85;
-            cantidad++;
+            cantidad++;}
+
         }
         else if (CatBebidas == 4){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Cafe";
-            precios[cantidad]=1.00;
-            total= total + 1.00;
-            cantidad++;
+            cout<<"Cuantas tazas de Cafe desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Cafe";
+                precios[cantidad]=1.00;
+                total= total + 1.00;
+                cantidad++;
+            }
         }
         else if (CatBebidas == 5){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Te";
-            precios[cantidad]=0.75;
-            total= total + 0.75;
-            cantidad++;
+            cout<<"Cuantas tazas de Te desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Te";
+                precios[cantidad]=0.75;
+                total= total + 0.75;
+                cantidad++;
+            }
         }
 
         else{
@@ -131,39 +164,54 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         cin>>CatComida;
 
         if (CatComida == 1){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Croissant de pollo";
-            precios[cantidad]=2.50;
-            total= total + 2.50;
-            cantidad++;
+            cout<<"Cuantas unidades de Croissant de pollo desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Croissant de pollo";
+                precios[cantidad]=2.50;
+                total= total + 2.50;
+                cantidad++;
+            }
         }
         else if (CatComida == 2){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Sandwich";
-            precios[cantidad]=1.50;
-            total= total + 1.50;
-            cantidad++;
+            cout<<"Cuantas unidades de Sandwich desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Sandwich";
+                precios[cantidad]=1.50;
+                total= total + 1.50;
+                cantidad++;
+            }
         }
         else if (CatComida == 3){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Sopa de Frijoles";
-            precios[cantidad]=1.75;
-            total= total + 1.75;
-            cantidad++;
+            cout<<"Cuantas unidades de Sopa de Frijoles desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Sopa de Frijoles";
+                precios[cantidad]=1.75;
+                total= total + 1.75;
+                cantidad++;
+            }
         }
         else if (CatComida == 4){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Ensalada";
-            precios[cantidad]=1.25;
-            total= total + 1.25;
-            cantidad++;
+            cout<<"Cuantas unidades de Ensalada desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Ensalada";
+                precios[cantidad]=1.25;
+                total= total + 1.25;
+                cantidad++;
+            }
         }
         else if (CatComida == 5){
-            for (int i = 0; i < cantidad; i++) {}
-            pedido[cantidad]="Tacos";
-            precios[cantidad]=2.00;
-            total= total + 2.00;
-            cantidad++;
+            cout<<"Cuantas unidades de Tacos desea comprar?\n";
+            cin>>cant;
+            for (int i = 0; i < cant; i++) {
+                pedido[cantidad]="Tacos";
+                precios[cantidad]=2.00;
+                total= total + 2.00;
+                cantidad++;
+            }
         }
 
         else{
@@ -181,5 +229,3 @@ cout << "Total acumulado: $" << total << "\n";
 
 return;
 }
-
-
