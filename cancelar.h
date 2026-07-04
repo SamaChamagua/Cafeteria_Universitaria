@@ -4,6 +4,6 @@
 #include <string>
 using namespace std;
 
-void cancelarPedido (string pedido[], double precios[],  int &cantidad, float &total);
+void cancelarPedido (string pedido[], float precios[],  int &cantidad, float &total);
 
 #endif
