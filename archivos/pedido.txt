@@ -1,0 +1,6 @@
+CAFETERIA UNIVERSITARIA
+------------------------
+Cheetos  $0.75
+Te  $0.75
+------------------------
+Total a pagar: $1.5

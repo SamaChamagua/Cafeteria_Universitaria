@@ -4,6 +4,7 @@ using namespace std;
 
 void realizarPedido(string pedido[], float precios[], int &cantidad, float &total);
 void cancelarPedido(string pedido[], float precios[], int &cantidad, float &total);
+void guardarPedido(string pedido[], float precios[], int &cantidad, float &total);
 
 int main()
 {
@@ -23,25 +24,26 @@ int main()
         cin >> opc;
 
         while (opc < 1 || opc > 3) {
-    cout << "\nOpcion invalida. Intente de nuevo.\n";
-    cout << "Seleccione una opcion: ";
-    cin >> opc; 
+            cout << "\nOpcion invalida. Intente de nuevo.\n";
+            cout << "Seleccione una opcion: ";
+            cin >> opc;
+        }
 
-    switch(opc) {
-    case 1:
-        realizarPedido(pedido, precios, cantidad, total);
-        break;
+        switch(opc) {
+        case 1:
+            realizarPedido(pedido, precios, cantidad, total);
+            break;
 
-    case 2:
-        cancelarPedido(pedido, precios, cantidad, total);
-        break;
+        case 2:
+            cancelarPedido(pedido, precios, cantidad, total);
+            break;
 
-    case 3:
-       guardarPedido(pedido, precios, cantidad, total);
-        break;
-}
+        case 3:
+            guardarPedido(pedido, precios, cantidad, total);
+            break;
+        }
 
-} while(opc != 3); 
+    } while(opc != 3);
 
-return 0;
+    return 0;
 }
