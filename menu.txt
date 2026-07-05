@@ -1,0 +1,10 @@
+===================================
+      CAFETERIA UNIVERSITARIA
+             U & COFFE
+===================================
+
+1. Realizar pedido
+2. Cancelar pedido
+3. Salir
+
+Seleccione una opcion:

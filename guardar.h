@@ -4,6 +4,6 @@
 #include <string>
 using namespace std;
 
-void guardarPedido(string pedido[], float precios[], int &cantidad, float &total);
+void guardarPedido(string pedido[], float precios[], int cantidades[], int &cantidad, float &total);
 
 #endif 

@@ -5,12 +5,29 @@
 
 using namespace std;
 
-void realizarPedido(string pedido[], float precios[], int &cantidad, float &total){ 
+void realizarPedido(string pedido[], float precios[], int cantidades[], int &cantidad, float &total){ 
 
     char categoria;
     int CatSnacks, CatBebidas, CatComida;
 
-    cout <<"Seleccione categoria:\n"<<"a)Snacks\n"<<"b)Bebidas\n"<<"c)Comida\n"<<"Opcion seleccionada: ";
+      ifstream archivo("menup.txt");
+        string linea;
+
+        if (archivo.is_open()) {
+
+            cout << "\n Menu principal seleccionado: \n";
+
+            while (getline(archivo, linea)) {
+                cout << linea << endl;
+            }
+
+            archivo.close();
+        }
+        else {
+            cout << "Error al abrir el archivo.\n";
+        }
+
+
     cin>>categoria;
 
     switch(categoria){
@@ -23,7 +40,7 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
 
         if (archivo.is_open()) {
 
-            cout << "Snacks:\n";
+            cout << "\n Menu de snacks seleccionado \n";
 
             while (getline(archivo, linea)) {
                 cout << linea << endl;
@@ -40,32 +57,38 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         if (CatSnacks == 1){
             pedido[cantidad]="Papa Lays";
             precios[cantidad]=0.65;
+            cantidades[cantidad] = 1;
             total= total + 0.65;
             cantidad++;
         }
         else if (CatSnacks == 2){
             pedido[cantidad]="Galleta Oreo";
             precios[cantidad]=0.50;
+            cantidades[cantidad] = 1;
             total= total + 0.50;
             cantidad++;
         }
         else if (CatSnacks == 3){
             pedido[cantidad]="Galleta trigo";
             precios[cantidad]=0.50;
+            cantidades[cantidad] = 1;
             total= total + 0.50;
             cantidad++;
         }
         else if (CatSnacks == 4){
             pedido[cantidad]="Cheetos";
             precios[cantidad]=0.75;
+            cantidades[cantidad] = 1;
             total= total + 0.75;
             cantidad++;
         }
         else if (CatSnacks == 5){
             pedido[cantidad]="Nachos";
             precios[cantidad]=0.25;
+            cantidades[cantidad] = 1;
             total= total + 0.25;
             cantidad++;
+            
         }
         else{
             cout<<"Opcion no valida\n";
@@ -82,7 +105,7 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
 
         if (archivo.is_open()) {
 
-            cout << "bebidas:\n";
+            cout << "\n Menu de bebidas seleccionado \n";
 
             while (getline(archivo, linea)) {
                 cout << linea << endl;
@@ -99,30 +122,35 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         if (CatBebidas == 1){
             pedido[cantidad]="Agua";
             precios[cantidad]=0.50;
+            cantidades[cantidad] = 1;
             total= total + 0.50;
             cantidad++;
         }
         else if (CatBebidas == 2){
             pedido[cantidad]="Jugo";
             precios[cantidad]=0.75;
+            cantidades[cantidad] = 1;
             total= total + 0.75;
             cantidad++;
         }
         else if (CatBebidas == 3){
             pedido[cantidad]="Refresco";
             precios[cantidad]=0.85;
+            cantidades[cantidad] = 1;
             total= total + 0.85;
             cantidad++;
         }
         else if (CatBebidas == 4){
             pedido[cantidad]="Cafe";
             precios[cantidad]=1.00;
+            cantidades[cantidad] = 1;
             total= total + 1.00;
             cantidad++;
         }
         else if (CatBebidas == 5){
             pedido[cantidad]="Te";
             precios[cantidad]=0.75;
+            cantidades[cantidad] = 1;
             total= total + 0.75;
             cantidad++;
         }
@@ -141,7 +169,7 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
 
         if (archivo.is_open()) {
 
-            cout << "comidas:\n";
+            cout << "\n Menu de comidas seleccionado\n";
 
             while (getline(archivo, linea)) {
                 cout << linea << endl;
@@ -158,30 +186,35 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         if (CatComida == 1){
             pedido[cantidad]="Croissant de pollo";
             precios[cantidad]=2.50;
+            cantidades[cantidad] = 1;
             total= total + 2.50;
             cantidad++;
         }
         else if (CatComida == 2){
             pedido[cantidad]="Sandwich";
             precios[cantidad]=1.50;
+            cantidades[cantidad] = 1;
             total= total + 1.50;
             cantidad++;
         }
         else if (CatComida == 3){
             pedido[cantidad]="Sopa de Frijoles";
             precios[cantidad]=1.75;
+            cantidades[cantidad] = 1;
             total= total + 1.75;
             cantidad++;
         }
         else if (CatComida == 4){
             pedido[cantidad]="Ensalada";
             precios[cantidad]=1.25;
+            cantidades[cantidad] = 1;
             total= total + 1.25;
             cantidad++;
         }
         else if (CatComida == 5){
             pedido[cantidad]="Tacos";
             precios[cantidad]=2.00;
+            cantidades[cantidad] = 1;
             total= total + 2.00;
             cantidad++;
         }
@@ -197,7 +230,7 @@ void realizarPedido(string pedido[], float precios[], int &cantidad, float &tota
         break;
     }
 
-    cout << "Total acumulado: $" << total << "\n";
+    cout << "Total venta acumulado: $" << total << "\n";
 
     return;
 }

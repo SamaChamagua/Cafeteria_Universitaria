@@ -1,26 +1,39 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
-void realizarPedido(string pedido[], float precios[], int &cantidad, float &total);
-void cancelarPedido(string pedido[], float precios[], int &cantidad, float &total);
-void guardarPedido(string pedido[], float precios[], int &cantidad, float &total);
+void realizarPedido(string pedido[], float precios[], int cantidades [],int &cantidad, float &total);
+void cancelarPedido(string pedido[], float precios[],int &cantidad, float &total);
+void guardarPedido(string pedido[], float precios[], int cantidades[], int &cantidad, float &total);
 
 int main()
 {
     string pedido[100];
     float precios[100];
+    int cantidades [100];
     int cantidad = 0;
     float total = 0;
     int opc;
 
     do
     {
-        cout << "\n== CAFETERIA UNIVERSITARIA ==\n";
-        cout << "1. Realizar pedido\n";
-        cout << "2. Cancelar pedido\n";
-        cout << "3. Salir\n";
-        cout << "Seleccione una opcion: ";
+        ifstream archivo("menu.txt");
+        string linea;
+
+        if (archivo.is_open()) {
+
+            cout << "\n Inicio: \n";
+
+            while (getline(archivo, linea)) {
+                cout << linea << endl;
+            }
+
+            archivo.close();
+        }
+        else {
+            cout << "Error al abrir el archivo.\n";
+        }
         cin >> opc;
 
         while (opc < 1 || opc > 3) {
@@ -31,7 +44,7 @@ int main()
 
         switch(opc) {
         case 1:
-            realizarPedido(pedido, precios, cantidad, total);
+            realizarPedido(pedido, precios, cantidades, cantidad, total);
             break;
 
         case 2:
@@ -39,7 +52,7 @@ int main()
             break;
 
         case 3:
-            guardarPedido(pedido, precios, cantidad, total);
+            guardarPedido(pedido, precios, cantidades, cantidad, total);
             break;
         }
 
