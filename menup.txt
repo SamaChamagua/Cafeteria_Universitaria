@@ -1,0 +1,11 @@
+=================================
+     CAFETERIA UNIVERSITARIA
+           U & COFFE
+=================================
+Seleccione categoria:
+---------------------------------
+a) Snacks
+b) Bebidas
+c) Comida
+---------------------------------
+Opcion seleccionada:
