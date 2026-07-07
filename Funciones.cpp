@@ -13,7 +13,7 @@ void realizarPedido(string pedido[], float precios[], int cantidades[], int &can
     char categoria;
     int CatSnacks, CatBebidas, CatComida;
 
-      ifstream archivo("menup.txt");
+      ifstream archivo("Txt carpeta/menup.txt");
         string linea;
 
         if (archivo.is_open()) {
@@ -38,7 +38,7 @@ void realizarPedido(string pedido[], float precios[], int cantidades[], int &can
     case 'a':
     case 'A': {
 
-        ifstream archivo("snack.txt");
+        ifstream archivo("Txt carpeta/snack.txt");
         string linea;
 
         if (archivo.is_open()) {
@@ -103,7 +103,7 @@ void realizarPedido(string pedido[], float precios[], int cantidades[], int &can
     case 'b':
     case 'B': {
 
-        ifstream archivo("bebidas.txt");
+        ifstream archivo("Txt carpeta/bebidas.txt");
         string linea;
 
         if (archivo.is_open()) {
@@ -167,7 +167,7 @@ void realizarPedido(string pedido[], float precios[], int cantidades[], int &can
     case 'c':
     case 'C': {
 
-        ifstream archivo("comida.txt");
+        ifstream archivo("Txt carpeta/comida.txt");
         string linea;
 
         if (archivo.is_open()) {
@@ -238,7 +238,7 @@ void realizarPedido(string pedido[], float precios[], int cantidades[], int &can
     return;
 }
 
-void cancelarPedido (string pedido[], float precios[], int &cantidad, float &total){
+void SalirPedido (string pedido[], float precios[], int &cantidad, float &total){
     system ("cls"); //Limpia la pantalla 
         if (cantidad >0){
             for(int i=0; i<cantidad; i++){
@@ -257,7 +257,7 @@ void cancelarPedido (string pedido[], float precios[], int &cantidad, float &tot
 
 void guardarPedido(string pedido[], float precios[], int cantidades[], int &cantidad, float &total){
 
-    ofstream archivo("pedido.txt");
+    ofstream archivo("Txt carpeta/pedido.txt");
 
     archivo << "=================================\n";
     archivo << "   BE HAPPY WITH JUST *U & COFFE* \n";
@@ -281,7 +281,7 @@ void guardarPedido(string pedido[], float precios[], int cantidades[], int &cant
     archivo.close();
 
     
- ifstream leer("pedido.txt");
+ ifstream leer("Txt carpeta/pedido.txt");
  string linea;
 
  while(getline(leer, linea))

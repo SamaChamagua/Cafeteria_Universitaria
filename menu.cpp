@@ -4,7 +4,7 @@
 using namespace std;
 
 void realizarPedido(string pedido[], float precios[], int cantidades [],int &cantidad, float &total);
-void cancelarPedido(string pedido[], float precios[],int &cantidad, float &total);
+void SalirPedido(string pedido[], float precios[],int &cantidad, float &total);
 void guardarPedido(string pedido[], float precios[], int cantidades[], int &cantidad, float &total);
 
 int main()
@@ -18,7 +18,7 @@ int main()
 
     do
     {
-        ifstream archivo("menu.txt");
+        ifstream archivo("Txt carpeta/menu.txt");
         string linea;
 
         if (archivo.is_open()) {
@@ -48,7 +48,7 @@ int main()
             break;
 
         case 2:
-            cancelarPedido(pedido, precios, cantidad, total);
+            SalirPedido(pedido, precios, cantidad, total);
             break;
 
         case 3:
