@@ -6,4 +6,4 @@ using namespace std;
 
 void realizarPedido(string pedido[], float precios[], int &cantidad, float &total);
 
-#endif 
+#endif
