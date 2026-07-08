@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
-#include "Archivos.h"
+#include "Funciones.h"
 
 
 using namespace std;
