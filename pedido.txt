@@ -2,15 +2,12 @@
    BE HAPPY WITH JUST *U & COFFE* 
 =================================
 
-CANT  PRODUCTO            PRECIO
+CANT   PRODUCTO           PRECIO
 ---------------------------------
-1     Papa Lays        $0.65
-1     Papa Lays        $0.65
-1     Papa Lays        $0.65
-1     Papa Lays        $0.65
-1     Papa Lays        $0.65
-1     Papa Lays        $0.65
-1     Papa Lays        $0.65
+1     Refresco        $0.85
+1     Refresco        $0.85
+1     Refresco        $0.85
+1     Refresco        $0.85
 ---------------------------------
-TOTAL: $4.55
+TOTAL: $3.4
 =================================

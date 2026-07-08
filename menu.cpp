@@ -65,6 +65,11 @@ int main(){
      //crea y sobrescribe el archivo de la factura
     ofstream archivo("pedido.txt");
 
+    if(!archivo.is_open()){
+        cout << "Error al abrir el archivo" << endl;
+        return 1;
+    }
+
     archivo << "=================================\n";
     archivo << "   BE HAPPY WITH JUST *U & COFFE* \n";
     archivo << "=================================\n\n";
