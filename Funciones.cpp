@@ -35,7 +35,7 @@ void realizarPedido(string pedido[], float precios[],int cantidades[], int &cant
      cout <<"*===Seleccione categoria:===*\n"
          <<"a)Snacks\n"
          <<"b)Bebidas\n"
-         <<"c)Comida\n";
+         <<"c)Comida";
     cin>>categoria;
 
     switch(categoria){

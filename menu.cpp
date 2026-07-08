@@ -9,6 +9,8 @@ void realizarPedido(string pedido[], float precios[],int cantidades[], int &cant
 void cancelarPedido(string pedido[], float precios[], int &cantidad, float &total);
 
 int main(){
+      //crea y sobrescribe el archivo de la factura
+    ofstream archivo("pedido.txt");
 
     string pedido[100];
     float precios[100];
@@ -62,8 +64,7 @@ int main(){
     
 }while (opc != 3);
 
-     //crea y sobrescribe el archivo de la factura
-    ofstream archivo("pedido.txt");
+   //Archivo final
 
     if(!archivo.is_open()){
         cout << "Error al abrir el archivo" << endl;
