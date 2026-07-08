@@ -5,34 +5,33 @@
 
 using namespace std;
 
-void realizarPedido(string pedido[], float precios[], int &cantidad, float &total);
+void realizarPedido(string pedido[], float precios[],int cantidades[], int &cantidad, float &total);
 void cancelarPedido(string pedido[], float precios[], int &cantidad, float &total);
 
 int main(){
 
     string pedido[100];
     float precios[100];
+    int cantidades[100];
     int cantidad = 0;
     float total = 0;
     int opc;
 
-    ofstream archivo;
-    archivo.open("pedidos.txt");
-    if(!archivo.is_open()){
-        cout << "No se pudo crear el archivo de pedidos." << endl;
-        return 1;
-    }
+ 
 
     do{
-        system("cls");
+        system("cls");//limpiador
 
-        cout << "\n== BIENVENIDO A CAFETERIA UNIVERSITARIA ==\n";
-        cout << "Seleccione una opcion:\n";
-        cout << "1. Realizar pedido\n";
-        cout << "2. Cancelar pedido\n";
-        cout << "3. Salir\n";
+        cout << "=================================\n";
+        cout << "       CAFETERIA UNIVERSITARIA   \n";
+        cout << "             U & COFFE           \n";
+        cout << "=================================\n";;
+        cout <<     "Seleccione una opcion:\n";
+        cout <<     "1. Realizar pedido\n";
+        cout <<     "2. Cancelar pedido\n";
+        cout <<     "3. Salir\n";
         cin >> opc;
-    
+    // filtro para avanzar
     while (opc < 1 || opc > 3) {
     cout << "\nOpcion invalida. Intente de nuevo.\n";
     cout << "Seleccione una opcion: ";
@@ -42,7 +41,7 @@ int main(){
 
     switch(opc) {
     case 1:
-        realizarPedido(pedido, precios, cantidad, total);
+        realizarPedido(pedido, precios, cantidades, cantidad, total);
         break;
 
     case 2:
@@ -63,21 +62,43 @@ int main(){
     
 }while (opc != 3);
 
-total = 0;
-for (int i = 0; i < cantidad; i++) {
-    total += precios[i];
+     //crea y sobrescribe el archivo de la factura
+    ofstream archivo("pedido.txt");
+
+    archivo << "=================================\n";
+    archivo << "   BE HAPPY WITH JUST *U & COFFE* \n";
+    archivo << "=================================\n\n";
+
+    archivo << "CANT   PRODUCTO           PRECIO\n";
+    archivo << "---------------------------------\n";
+
+    for(int i = 0; i < cantidad; i++)
+    {
+        archivo << cantidades[i] << "     " << pedido[i] << "        $" << precios[i] << "\n";
+    }
+
+    archivo << "---------------------------------\n";
+    archivo << "TOTAL: $" << total << "\n";
+    archivo << "=================================\n";
+    
+
+    archivo.close();
+
+
+
+
+    //lo lee segun la info
+ ifstream leer("pedido.txt");
+ string linea;
+
+ while(getline(leer, linea))
+{
+    cout << linea << endl;
 }
-cout << "\nTotal a pagar: $" << total << endl;
+  
+ leer.close();
+ cout << "Pedido guardado correctamente.\n";
+ cout<<"\nGracias por usar el sistema de pedidos. Su pedido ha sido guardado :) \n";
 
-archivo<<"Lista de productos:\n";
-for (int i = 0; i < cantidad; i++) {
-    archivo << pedido[i] << " - $" << precios[i] << endl;
-}
-archivo << "Total a pagar: $" << total << endl;
-
-archivo.close();
-
-cout<<"\nGracias por usar el sistema de pedidos. Su pedido ha sido guardado :) \n";
-
-return 0;
+ return 0;
 }
